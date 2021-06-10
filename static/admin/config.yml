@@ -1,6 +1,7 @@
 backend:
   name: github
-  repo: thomaswang/gatsby-personal-starter-blog
+  repo: miyazakimaiko/portfolio-blog-2021-2
+  branch: main
 
 media_folder: content/assets
 public_folder: ../assets
@@ -13,6 +14,11 @@ collections:
     fields:
       - { name: path, label: Path }
       - { name: date, label: Date, widget: date }
+      - { name: updatedAt, label: Updated At, widget: date }
       - { name: title, label: Title }
       - { name: description, label: Description }
       - { name: body, label: Body, widget: markdown }
+      - { name: featuredImage, label: Featured Image, widget: image }
+      - { name: featured, label: Featured, widget: boolean }
+      - { name: topics, label: Topics, widget: TopicsJson }
+  
