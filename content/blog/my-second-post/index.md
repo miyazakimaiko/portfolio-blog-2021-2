@@ -1,6 +1,14 @@
 ---
 title: My Second Post!
 date: "2015-05-06T23:46:37.121Z"
+slug: test
+updatedAt: "2021-06-08T12:34:09.123Z"
+description: test
+featured: true
+topics:
+ - python
+ - software-development
+featuredImage: ./salty_egg.jpg
 ---
 
 Wow! I love blogging so much already.

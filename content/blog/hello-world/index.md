@@ -1,6 +1,14 @@
 ---
 title: Hello World
 date: "2015-05-01T22:12:03.284Z"
+slug: Test
+updatedAt: "2021-06-08T12:34:09.123Z"
+description: test
+topics:
+ - javascript
+ - python
+featuredImage: ./salty_egg.jpg
+featured: true
 ---
 
 This is my first post on my new fake blog! How exciting!

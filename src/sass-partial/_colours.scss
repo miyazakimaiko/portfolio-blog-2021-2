@@ -1,0 +1,17 @@
+/*============================================
+ Border Colour
+============================================*/
+
+@function get-main-white-colour($alpha: 0.6) {
+    @return rgba(255, 255, 255, $alpha)
+}
+
+@function get-bg-gray-colour($alpha: 0.6) {
+    @return rgba(113, 143, 154, $alpha);
+}
+
+$main-font-colour: #4a4a4a;
+$main-gray-colour: whitesmoke;
+$sub-gray-colour: #EBEBEB;
+$brown-colour: #942F22;
+$pink-colour: #C68372;

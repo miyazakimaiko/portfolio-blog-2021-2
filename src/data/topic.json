@@ -1,0 +1,14 @@
+[
+    {
+      "name": "JavaScript",
+      "slug": "javascript"
+    },
+    {
+        "name": "Python",
+        "slug": "python"
+    },
+    {
+        "name": "Software Development",
+        "slug": "software-development"
+    }
+  ]

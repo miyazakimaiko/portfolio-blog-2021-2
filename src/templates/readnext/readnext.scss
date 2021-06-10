@@ -1,0 +1,117 @@
+@import "../../sass-partial/screen-size-mixin";
+@import "../../sass-partial/font";
+@import "../../sass-partial/colours";
+
+.post-recommendation-section {
+    margin: 0 20px 60px;
+
+    @include md {
+        text-align: center;
+    }
+
+    h4 {
+        display: inline;
+        text-align: center;
+        font-size: $read-next-title-font-size-xs;
+        margin-bottom: 20px;
+        font-style: italic;
+
+        @include sm {
+            font-size: $read-next-title-font-size-sm;
+        }
+    }.arrow-icon {
+        height: $read-next-title-font-size-xs;
+        display: inline-block;
+        vertical-align: bottom;
+        margin-left: 5px;
+
+        @include sm {
+            height: $read-next-title-font-size-sm;
+        }
+    }
+    hr {
+        width: 100%;
+        margin: 10px 0 20px;
+
+        @include md {
+            width: 90%;
+            margin: 10px auto 50px;
+        }
+    }
+    .posts-container {
+        @include md {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            width: 80vw;
+            margin: auto;
+        }
+
+        .single-post {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 0 20px 0;
+            display: flex;
+            justify-content: flex-start;
+
+            @include md {
+                width: 48%;
+                margin: 0 0 40px 0;
+            }
+
+            .post-image-containter {
+                margin: auto 15px auto 0;
+                box-shadow: 4px 11px 20px 0px #00000029;
+                .image {
+                    height: 60px;
+                    width: 60px;
+                    border-radius: 6px;
+                    background-image: url('/assets/images/old-stores-signboard.JPG');
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+
+                    @include sm {
+                        height: 100px;
+                        width: 100px;
+                    }
+                }
+            }
+            .post-detail {
+                margin: auto 0;
+                text-align: left;
+                h5 {
+                    margin-bottom: 10px;
+                    line-height: 1.2;
+                    font-family: $sub-font;
+                    font-size: $post-detail-title-font-size-xs;
+                    font-weight: 200;
+
+                    @include sm {
+                        font-size: $post-detail-title-font-size-sm;
+                    }
+                }
+                p {
+                    display: inline-block;
+                    text-transform: uppercase;
+                    font-size: $unit-meta-font-size-xs;
+                    color: rgba($brown-colour, 0.6);
+
+                    @include sm {
+                        font-size: $unit-meta-font-size-sm;
+                    }
+
+                    &:after {
+                        content: ", ";
+                    }
+
+                    &:last-child {
+                        &::after {
+                            content: "";
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

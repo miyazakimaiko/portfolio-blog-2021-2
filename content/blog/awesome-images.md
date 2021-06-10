@@ -1,8 +1,13 @@
 ---
-path: awesome-images
-date: 2020-06-06T01:22:55.506Z
+slug: awesome-images
+date: "2020-06-06T01:22:55.506Z"
 title: Awesome Images
 description: Fix for gatsby-plugin-mdx and gatsby-remark-images
+updatedAt: "2021-06-08T12:34:09.123Z"
+featured: true
+topics:
+ - javascript
+featuredImage: ./salty_egg.jpg
 ---
 ![Great Gatsby](/../assets/great2.jpg "Great Gatsby")
 

@@ -1,64 +1,13 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-
-import Bio from "../components/bio"
+import * as React from "react"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Button from "../components/button"
-import SearchPosts from "../components/searchPosts"
+import Seo from "../components/seo"
+import Blog from "../components/blog"
 
-class Blog extends React.Component {
-  render() {
-    const { data, navigate, location } = this.props
-    const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMdx.edges
-    const localSearchBlog = data.localSearchBlog
+const BlogPage = () => (
+  <Layout>
+    <Seo title="Blog" />
+    <Blog />
+  </Layout>
+)
 
-    return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="All posts" />
-        <Bio />
-        <SearchPosts
-          posts={posts}
-          localSearchBlog={localSearchBlog}
-          navigate={navigate}
-          location={location}
-        />
-        <Link to="/">
-          <Button marginTop="85px">Go Home</Button>
-        </Link>
-      </Layout>
-    )
-  }
-}
-
-export default Blog
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    localSearchBlog {
-      index
-      store
-    }
-    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
-          }
-        }
-      }
-    }
-  }
-`
+export default BlogPage

@@ -1,0 +1,50 @@
+@import "../../../sass-partial/screen-size-mixin";
+@import "../../../sass-partial/colours";
+@import "../../../sass-partial/font";
+
+.nav-sub-menu-link-list {
+    margin: 2vw 0;
+
+    @include sm {
+        margin: 8px 0;
+    }
+
+    .sub-menu-link {
+        > a {
+            display: inline-block;
+            padding: 4vw 0 4vw 8vw;
+
+            @include sm {
+                padding: 15px 35px 15px 70px;
+            }
+
+            &:hover .sub-menu-link-text {
+                color: rgba($main-font-colour, 0.342);
+            }
+
+            &:hover .arrow-icon {
+                color: rgba($main-font-colour, 0.342);
+            }
+            
+            .sub-menu-link-text {
+                display: inline;
+                font-size: 5vw;
+                transition: all .3s ease;
+
+                @include sm {
+                    font-size: 20px;
+                }
+            }
+
+            .arrow-icon {
+                height: 5vw;
+                margin-right: 10px;
+                transition: all .3s ease;
+
+                @include sm {
+                    height: 20px;
+                }
+            }
+        }
+    }
+}

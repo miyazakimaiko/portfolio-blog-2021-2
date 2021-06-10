@@ -1,0 +1,45 @@
+@import "../../sass-partial/screen-size-mixin";
+@import "../../sass-partial/font";
+@import "../../sass-partial/colours";
+@import "../../sass-partial/asset-urls";
+
+body {
+    font-family: $main-font;
+    color: $main-font-colour;
+    background-color: $main-gray-colour;
+
+    .cursor {
+        width: 10px;
+        height: 10px;
+        background-color: $brown-colour;
+        opacity: 0.8;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 100;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        transition: all 0.3s ease;
+        transition-property: background, transform;
+        transform-origin: 100% 100%;
+    }
+    .whiten {
+        background-color: $main-gray-colour;
+    }
+    .logo {
+        background-image: url('../../images/logo.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 300px;
+        max-width: 70vw;
+        height: calc(100vw/10);
+        max-height: 50px;
+    }
+    a:hover {
+        color: $brown-colour;
+    }
+    .link-grow {
+        background-color: $pink-colour;
+        transform: scale(3);
+        opacity: 0.4;
+    }
+}

@@ -1,0 +1,154 @@
+@import "../../../sass-partial/screen-size-mixin";
+@import "../../../sass-partial/colours";
+@import "../../../sass-partial/font";
+
+
+article {
+
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+
+    @include sm {
+        padding-bottom: 70px;
+    }
+
+    @include xl {
+        top: 85vh;
+        width: 100%;
+    }
+
+    .article-contents {
+        width: 90%;
+
+        @include lg {
+            width: 869px;
+        }
+    }
+
+    p {
+        font-size: $s-font-size-xs;
+        font-family: $main-font;
+        line-height: $s-font-line-height-xs;
+        font-weight: 200;
+        padding-bottom: 26px;
+
+        hyphens: auto;
+
+        @include sm {
+            font-size: $s-font-size-sm;
+            line-height: $s-font-line-height-sm;
+        }
+    }
+
+    .single-unit-post {
+        width: 100%;
+        margin: 8vh auto 0;
+        text-align: center;
+    
+        @include sm {
+            margin-bottom: 70px 0;
+        }
+    
+        &:after {
+            content: "";
+            display: block;
+            width: 30%;
+            height: 1px;
+            margin: 8vh auto 0;
+            background-color: rgba($main-font-colour, 0.6);
+    
+            @include sm {
+                margin: 90px auto 0;
+            }
+        }
+    
+        .meta-tertiary {
+            font-size: $unit-meta-font-size-xs;
+            .date-updated {
+                font-style: italic;
+                &:before {
+                    content: " * Updated on ";
+                }
+            }
+    
+            @include sm {
+                font-size: $unit-meta-font-size-sm;
+                letter-spacing: $unit-meta-font-letter-spacing-sm;
+            }
+        }
+        .headline {
+            font-family: $sub-font;
+            line-height: 1.4;
+            font-size: $unit-headline-font-size-xs;
+            margin: 0 0 10px 0;
+    
+            @include sm {
+                font-size: $unit-headline-font-size-sm;
+                margin-bottom: 25px;
+            }
+        }
+        .categories {
+            font-size: $unit-categories-font-size-xs;
+    
+            @include sm {
+                font-size: $unit-categories-font-size-sm;
+            }
+    
+            a {
+                color: $pink-colour;
+                text-transform: uppercase;
+                &:after {
+                    content: ", ";
+                }
+                &:last-child:after {
+                    content: "";
+                }
+            }
+        }
+        .thumbnail {
+            width: 100%;
+            height: 30vh;
+            box-shadow: 0 10px 10px -2px #0000002e;
+    
+            @include sm {
+                height: 300px;
+            }
+    
+            a {
+                display: block;
+                height: 100%;
+                width: 100%;
+    
+                background-repeat: no-repeat;
+                background-size:cover;
+                background-position-x: 50%;
+                background-position-y: 50%;
+                border-radius: 6px;
+            }
+        }
+    }
+    .pagers {
+        width: 100%;
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+    
+        .pager {
+            border: 1px solid rgba($main-font-colour, 0.1);
+            border-radius: 3px;
+            max-width: 45vw;
+            text-align: center;
+    
+            a {
+                display: block;
+                padding: 15px;
+
+                .icon {
+                    height: $s-font-size-sm - 4px;
+                    vertical-align: top;
+                }
+            }
+        }
+    }
+}

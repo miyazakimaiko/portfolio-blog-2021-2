@@ -1,0 +1,110 @@
+@import "screen-size-mixin";
+@import "asset-urls";
+@import "colours";
+
+header {
+    z-index: 100;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 92vw;
+    height: 90px;
+    padding: 0 4vw;
+
+    @include sm {
+        height: 140px;
+    }
+
+    a {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.menu-wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transform:scale(0.8);
+    padding: 0;
+    cursor: pointer;
+    z-index:20;
+    transition: all 0.3s ease;
+    background-color: rgba($brown-colour, 1);
+
+    &:hover {
+        background-color: rgba($brown-colour, 0.8);
+    }
+
+    @include sm {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+.menu-bar {
+    width: 30px;
+    height: 3px;
+    border-radius: 30%;
+    position: absolute;
+    transition: all 0.3s;
+    background: white;
+    @include sm {
+        width: 55px;
+        height: 4px;
+    }
+}
+
+.menu-bar1 {
+    margin-top: 18px;
+    margin-left: 15px;
+    @include sm {
+        margin-top: 22px;
+        margin-left: 16px;
+    }
+}
+.menu-bar2 {
+    margin-top: 29px;
+    margin-left: 15px;
+    @include sm {
+        margin-top: 43px;
+        margin-left: 16px;
+    }
+}
+.menu-bar3 {
+    margin-top: 40px;
+    margin-left: 15px;
+    @include sm {
+        margin-top: 62px;
+        margin-left: 16px;
+    }
+}
+
+.menu-icon.hover{
+    .menu-bar1 {
+        transform: rotate(45deg);
+        margin-top: 29px;
+
+        @include sm {
+            margin-top: 43px; 
+        }
+    }
+    .menu-bar2 {
+        opacity: 0
+    }
+    .menu-bar3 {
+        transform: rotate(-45deg);
+        margin-top: 29px;
+
+        @include sm {
+            margin-top: 43px; 
+        }
+    }
+} 

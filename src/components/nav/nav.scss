@@ -1,0 +1,82 @@
+@import "../../sass-partial/screen-size-mixin";
+@import "../../sass-partial/colours";
+@import "../../sass-partial/font";
+
+#nav-screen {
+    width: 100vw;
+    min-height: 100%;
+    padding-top: 90px;
+
+    z-index: 99;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    justify-content: center;
+    transition: all 0.4s;
+    background: $sub-gray-colour;
+
+    @include xl {
+        padding-top: 140px;
+    }
+
+    .nav-main-menu-link-list {
+        width: 90vw;
+        margin-bottom: 50px;
+
+        @include lg {
+            width: 30vw;
+        }
+
+        .main-menu-link {
+            margin-bottom: 2.5vw;
+            position: relative;
+            left: 0;
+
+            @include sm {
+                margin-bottom: 10px;
+            }
+        
+            > a {
+                display: inline-block;
+                text-decoration: none;
+                padding: 2.5vw 0;
+                
+                @include sm {
+                    padding: 10px 35px; 
+                }
+
+                &:hover .main-menu-link-text {
+                    color: rgba($main-font-colour, 0.342);
+                }
+            }
+            .main-menu-link-text {
+                align-self: center;
+                font-size: 7vw;
+                //font-family: $sub-font;
+                font-weight: 600;
+                z-index: 3;
+                cursor: pointer;
+                transition: all .3s ease;
+
+                @include sm {
+                    font-size: 34px;
+                }
+            }
+
+            // .slide-in-text {
+            //     clip-path: inset(0 100% 0 0);
+            //     transition: 0.7s cubic-bezier(0.37, 0, 0.63, 1);
+            //     transition-property: clip-path;
+            // }
+        
+            // .is-animated {
+            //     clip-path: inset(0) !important;
+            // }
+        }
+        .nested {
+            display: block;
+        }
+    }
+}
