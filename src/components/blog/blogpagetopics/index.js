@@ -21,6 +21,9 @@ export default () => (
             <div className="blog-nav">
                 <h5 className="blog-nav-title">Topics</h5>
                 <ul className="blog-nav-list">
+                    <li>
+                        <Link to={`/blog/`} className="active">All</Link>
+                    </li>
                 {data.allTopicJson.edges.map(edge => (
                     <li>
                         <Link to={`/${edge.node.slug}/`}>{edge.node.name}</Link>

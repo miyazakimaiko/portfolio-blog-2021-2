@@ -40,8 +40,6 @@
 
             li {
                 transition: all 0.3s;
-                border: 1px solid rgba($main-font-colour, 0.1);
-                border-radius: 3px;
                 margin: 5px;
 
                 a {
@@ -51,11 +49,17 @@
                     padding: 10px;
                     font-size: $blog-nav-link-font-size-xs;
                     font-weight: 400;
+                    border: 1px solid rgba($main-font-colour, 0.1);
+                    border-radius: 3px;
                     transition: all 0.2s ease;
 
                     @include sm {
                         font-size: $blog-nav-link-font-size-sm;
                     }
+                }
+                .active {
+                    background-color: $pink-colour;
+                    color: white;
                 }
             }
         }
