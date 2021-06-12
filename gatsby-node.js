@@ -2,11 +2,60 @@ const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const { link } = require("fs")
 
+exports.createSchemaCustomization = ({ actions, schema }) => {
+  const { createTypes } = actions
+  const typeDefs = [
+    schema.buildObjectType({
+      name: "TopicJson",
+      fields: {
+        name: "String!",
+        slug: "String!"
+      },
+      interfaces: ["Node"],
+    }),
+  ]
+  createTypes(typeDefs)
+}
+
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const blogPost = path.resolve(`./src/templates/blog-post.js`)
-  return graphql(
+  const topicsCollection = graphql(
+    `
+      {
+        allTopicJson {
+          edges {
+            node {
+              slug
+              name
+            }
+          }
+        }
+      }
+    `
+  ).then(result => {
+    if (result.errors) {
+      throw result.errors
+    }
+
+    // Create blog topic list pages.
+    const topics = result.data.allTopicJson.edge
+
+    topics.forEach((topic) => {
+      createPage({
+        path: `${topic.node.slug}`,
+        component: path.resolve(`./src/templates/blog-topic/index.js`),
+        context: {
+          slug: topic.node.slug,
+          topicName: topic.node.name,
+        },
+      })
+    })
+
+    return null
+  })
+
+  const blogPostCollection = graphql(
     `
       {
         allMarkdownRemark(
@@ -37,8 +86,8 @@ exports.createPages = ({ graphql, actions }) => {
       const next = index === 0 ? null : posts[index - 1].node
 
       createPage({
-        path: `blog${post.node.frontmatter.slug}`,
-        component: blogPost,
+        path: `blog/${post.node.frontmatter.slug}`,
+        component: path.resolve(`./src/templates/blog-post/index.js`),
         context: {
           slug: post.node.frontmatter.slug,
           previous,
@@ -49,6 +98,8 @@ exports.createPages = ({ graphql, actions }) => {
 
     return null
   })
+
+  return Promise.all([topicsCollection, blogPostCollection])
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
@@ -62,21 +113,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       value,
     })
   }
-}
 
-exports.createSchemaCustomization = ({ actions, schema }) => {
-  const { createTypes } = actions
-  const typeDefs = [
-    schema.buildObjectType({
-      name: "TopicJson",
-      fields: {
-        name: "String!",
-        slug: "String!"
-      },
-      interfaces: ["Node"],
-    }),
-  ]
-  createTypes(typeDefs)
 }
 
 // https://www.gatsbyjs.com/docs/reference/graphql-data-layer/schema-customization/
@@ -95,7 +132,7 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
           type: "Date",
           extensions: {
             dateformat: {
-              formatString: "DD MMMM 'YY"
+              formatString: "DD MM YYYY"
             }
           }
         },
@@ -103,7 +140,7 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
           type: "Date",
           extensions: {
             dateformat: {
-              formatString: "DD MMMM 'YY"
+              formatString: "DD MM YYYY"
             }
           }
         },
