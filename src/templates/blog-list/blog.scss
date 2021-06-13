@@ -1,0 +1,79 @@
+@import "../../sass-partial/screen-size-mixin";
+@import "../../sass-partial/font";
+@import "../../sass-partial/colours";
+
+// .article-header {
+//     background-image:         
+//     linear-gradient(
+//     to bottom,
+//     rgba(0, 0, 0, 0.3), 
+//     rgba(0, 0, 0, 0.3)), 
+//     $chairs-in-the-platform;
+// }
+
+main {
+    .inner-screen-container {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        color: rgba($main-font-colour, 0.9);
+        
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .article-header {
+            background-size: cover;
+            background-position-x: 50%;
+            background-position-y: 50%;
+            height: 60vh;
+            margin-bottom: 40px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+
+            @include sm {
+                margin-bottom: 90px;
+            }
+
+            .page-title {
+                font-family: $sub-font;
+                font-size: $header-font-size-xs;
+                font-weight: 100;
+                line-height: 1.3;
+                text-align: center;
+
+                margin: 50px 0 20px 0;
+
+                @include sm {
+                    font-size: $header-font-size-sm;
+                }
+            }
+            .page-description {
+                font-size: $s-font-size-xs;
+                font-family: $main-font;
+                line-height: $s-font-line-height-xs;
+                font-weight: 200;
+                color: get-main-white-colour(0.9);
+                text-align: center;
+
+                width: 90vw;
+                max-width: 670px;
+
+                @include sm {
+                    font-size: $s-font-size-sm;
+                    line-height: 1.5;
+                }
+            }
+        }
+        .article-container {
+            display: flex;
+            flex-direction: column;
+            width: 95vw;
+            margin: auto;
+        }
+    }
+}
