@@ -17,10 +17,10 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
   createTypes(typeDefs)
 }
 
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const topicsCollection = graphql(
+  graphql(
     `
       {
         allTopicJson {
@@ -39,23 +39,68 @@ exports.createPages = ({ graphql, actions }) => {
     }
 
     // Create blog topic list pages.
-    const topics = result.data.allTopicJson.edge
+    const topics = result.data.allTopicJson.edges
 
-    topics.forEach((topic) => {
-      createPage({
-        path: `${topic.node.slug}`,
-        component: path.resolve(`./src/templates/blog-topic/index.js`),
-        context: {
-          slug: topic.node.slug,
-          topicName: topic.node.name,
-        },
+    Promise.all(topics.map(async (topic) => {
+      await graphql(
+        `query ($slug: String!) {
+            allMarkdownRemark(
+              filter: {
+                frontmatter: {
+                    topics: {
+                        elemMatch: {
+                            slug: {eq: $slug}
+                        }
+                    }
+                }
+            }
+              sort: { fields: [frontmatter___date], order: DESC }
+              limit: 1000
+            ) {
+              edges {
+                node {
+                  frontmatter {
+                    title
+                    slug
+                  }
+                }
+              }
+            }
+          }
+        `,
+        {slug: topic.node.slug}
+
+      ).then(blogPostResult => {
+        if (blogPostResult.errors) {
+          throw blogPostResult.errors
+        }
+    
+        // Create blog posts pages.
+        const posts = blogPostResult.data.allMarkdownRemark.edges
+    
+        // Create blog list pages.
+        const postsPerPage = 6
+        const numPages = Math.ceil(posts.length / postsPerPage)
+        Array.from({ length: numPages }).forEach((_, i) => {
+          createPage({
+            path: i === 0 ? `/${topic.node.slug}` : `/${topic.node.slug}/${i + 1}`,
+            component: path.resolve(`${__dirname}/src/templates/blog-topic/index.js`),
+            context: {
+              name: topic.node.name,
+              slug: topic.node.slug,
+              limit: postsPerPage,
+              skip: i * postsPerPage,
+              numPages,
+              currentPage: i + 1,
+            },
+          })
+        })
       })
-    })
-
-    return null
+    }))
+      return null
   })
 
-  const blogPostCollection = graphql(
+  const blogPostCollection = await graphql(
     `
       {
         allMarkdownRemark(
@@ -96,10 +141,25 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
 
+    // Create blog list pages.
+    const postsPerPage = 6
+    const numPages = Math.ceil(posts.length / postsPerPage)
+    Array.from({ length: numPages }).forEach((_, i) => {
+      createPage({
+        path: i === 0 ? `/blog` : `/blog/${i + 1}`,
+        component: path.resolve("./src/templates/blog-list/index.js"),
+        context: {
+          limit: postsPerPage,
+          skip: i * postsPerPage,
+          numPages,
+          currentPage: i + 1,
+        },
+      })
+    })
     return null
   })
 
-  return Promise.all([topicsCollection, blogPostCollection])
+  await Promise.all([blogPostCollection])
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
