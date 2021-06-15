@@ -8,6 +8,7 @@ export default () => (
         query ReadNextQuery ($relatedFilePaths: [String]) {
             allMarkdownRemark (
                 filter: { fileAbsolutePath: { in: $relatedFilePaths } }
+                limit: 6
               ) 
               {
                 edges {
