@@ -46,6 +46,7 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
     "react-switch": "^5.0.0",
+    "react-twitter-embed": "^3.0.3",
     "react-typography": "^0.16.19",
     "react-use-flexsearch": "^0.1.1",
     "styled-components": "^4.2.0",
