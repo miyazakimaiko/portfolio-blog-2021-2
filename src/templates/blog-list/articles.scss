@@ -22,7 +22,7 @@ article {
         width: 90%;
 
         @include lg {
-            width: 869px;
+            width: 790px;
         }
     }
 
@@ -40,7 +40,6 @@ article {
             line-height: $s-font-line-height-sm;
         }
     }
-
     .single-unit-post {
         width: 100%;
         margin: 8vh auto 0;
