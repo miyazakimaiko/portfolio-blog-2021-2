@@ -60,7 +60,7 @@ module.exports = {
           })),
       },
     },
-    `gatsby-plugin-feed-mdx`,
+    // `gatsby-plugin-feed-mdx`,
     `gatsby-plugin-root-import`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -132,14 +132,16 @@ module.exports = {
     //     pathToConfigModule: `src/utils/typography`,
     //   },
     // },
-    // need to install...................................................
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [{
           resolve: `gatsby-remark-vscode`,
           options: {
-            theme: 'Abyss' // Or install your favorite theme from GitHub
+            colorTheme: 'Light (Visual Studio)',
+            injectStyles: true,
+            extensions: [],
+            logLevel: 'error'
           }
         }]
       }
@@ -157,6 +159,17 @@ module.exports = {
       options: {
         path: `${__dirname}/src/data/`,
       },
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `baskervville\:200, 400`,
+          `Mulish\:300, 300i, 400, 600`,
+          `fira code\:300`
+        ],
+        display: 'swap'
+      }
     },
   ],
 }
