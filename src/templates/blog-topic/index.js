@@ -39,7 +39,7 @@ const BlogTopicTemplate = ({data, pageContext}) => {
                                 <time className="date-updated">{edge.node.frontmatter.updatedAt}</time>
                             </p>
                             <h2 className="headline">
-                            <Link to={`/${pageContext.slug}/${edge.node.frontmatter.slug}/`}>{edge.node.frontmatter.title}</Link>
+                            <Link to={`/blog/${edge.node.frontmatter.slug}/`}>{edge.node.frontmatter.title}</Link>
                             </h2>
                             <p className="categories">
                             {edge.node.frontmatter.topics.map(topic => (
@@ -47,7 +47,7 @@ const BlogTopicTemplate = ({data, pageContext}) => {
                             ))}
                             </p>
                             <div className="thumbnail">
-                                <Link to={`/${edge.node.frontmatter.slug}/`} className="thumbnail-image" style={{backgroundImage: `url(${edge.node.featuredImage})`}}></Link>
+                                <Link to={`/blog/${edge.node.frontmatter.slug}/`} className="thumbnail-image" style={{backgroundImage: `url(${edge.node.featuredImage})`}}></Link>
                             </div>
                         </div>
                     ))}

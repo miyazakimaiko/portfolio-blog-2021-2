@@ -48,7 +48,11 @@ const BlogListTemplate = ({data, pageContext}) => {
                             ))}
                             </p>
                             <div className="thumbnail">
-                                <Link to={`/${edge.node.frontmatter.slug}/`} className="thumbnail-image" style={{backgroundImage: `url(${edge.node.featuredImage})`}}></Link>
+                                <Link 
+                                    to={`/blog/${edge.node.frontmatter.slug}/`} 
+                                    className="thumbnail-image" 
+                                    style={{backgroundImage: `url(${edge.node.featuredImage})`}}>
+                                </Link>
                             </div>
                         </div>
                     ))}
