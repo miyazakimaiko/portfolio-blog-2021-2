@@ -41,7 +41,6 @@ header {
     padding: 0;
     cursor: pointer;
     z-index:20;
-    transition: all 0.3s ease;
     background-color: rgba($brown-colour, 1);
 
     &:hover {
@@ -59,7 +58,6 @@ header {
     height: 3px;
     border-radius: 30%;
     position: absolute;
-    transition: all 0.3s;
     background: white;
     @include sm {
         width: 55px;
