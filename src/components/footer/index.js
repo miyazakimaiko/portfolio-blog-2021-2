@@ -1,6 +1,8 @@
 import React from 'react'
 import './footer.css'
 import { Link } from 'gatsby'
+import { TwitterTimelineEmbed } from 'react-twitter-embed';
+
 
 const Footer = () => (
     <footer>
@@ -169,8 +171,11 @@ const Footer = () => (
                 <hr/>
 
                 <div className="timeline-container">
-                    <a className="twitter-timeline" href="https://twitter.com/MaikoMiyazaki?ref_src=twsrc%5Etfw">Tweets by MaikoMiyazaki</a>
-                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <TwitterTimelineEmbed
+                    sourceType="profile"
+                    screenName="MaikoMiyazaki"
+                    options={{height: 400}}
+                    />
                 </div>
                 
             </div>
