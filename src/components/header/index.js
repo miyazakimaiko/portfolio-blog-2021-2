@@ -10,7 +10,7 @@ const Header = ({ siteTitle }) => (
 
   <header className="main" style={{position: "absolute"}}>
     <Link id="header-logo-link" to="/">
-        <h1><img src={LogoImg} id="header-logo" alt="maiko miyazaki" className="logo"/></h1>
+        <h1><img src={LogoImg} id="header-logo" alt="maiko miyazaki"/></h1>
     </Link>
     <div className="menu-wrapper">
         <div className="menu-icon" id="humberger-menu-icon">

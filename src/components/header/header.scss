@@ -24,6 +24,13 @@ header {
         height: 100%;
         display: flex;
         align-items: center;
+
+        #header-logo {
+            width: 300px;
+            max-width: 70vw;
+            height: calc(100vw/10);
+            max-height: 50px;
+        }
     }
 }
 
