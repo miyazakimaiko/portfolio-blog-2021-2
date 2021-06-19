@@ -142,6 +142,7 @@
                             width: $popular-article-metadata-font-size-xs;
                             display: inline-block;
                             vertical-align: middle;
+                            margin-right: 5px;
 
                             @include sm {
                                 height: $popular-article-metadata-font-size-sm;
