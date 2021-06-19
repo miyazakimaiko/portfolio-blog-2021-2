@@ -20,7 +20,7 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  graphql(
+  await graphql(
     `
       {
         allTopicJson {
@@ -203,9 +203,6 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
               formatString: "DD MM YYYY"
             }
           }
-        },
-        featuredImage: {
-          type: "String"
         },
         slug: {
           type: "String"
