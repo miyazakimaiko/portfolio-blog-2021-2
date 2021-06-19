@@ -98,6 +98,14 @@
                         font-size: $popular-article-metadata-font-size-xs;
                         text-transform: uppercase;
                         transition: all .3s ease;
+                        margin-left: 7px;
+                        &:after {
+                            content: "/";
+                            margin-left: 7px;
+                        }
+                        &:last-child:after {
+                            content: "";
+                        }
 
                         @include sm {
                             font-size: $popular-article-metadata-font-size-sm;
