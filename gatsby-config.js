@@ -76,11 +76,24 @@ module.exports = {
         name: `assets`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/images`,
+        name: `images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/pages`,
+        name: 'pages',
+      },
+    },
     // {
-    //   resolve: `gatsby-plugin-mdx`,
+    //   resolve: `gatsby-transformer-remark`,
     //   options: {
-    //     extensions: [".mdx", ".md"],
-    //     gatsbyRemarkPlugins: [
+    //     plugins: [
     //       {
     //         resolve: `gatsby-remark-images`,
     //         options: {
@@ -93,19 +106,17 @@ module.exports = {
     //           wrapperStyle: `margin-bottom: 1.0725rem`,
     //         },
     //       },
-    //       {
-    //         resolve: `gatsby-remark-vscode`,
-    //       },
-    //       {
-    //         resolve: `gatsby-remark-copy-linked-files`,
-    //       },
-    //       {
-    //         resolve: `gatsby-remark-smartypants`,
-    //       },
+    //       'gatsby-remark-prismjs',
+    //       'gatsby-remark-copy-linked-files',
+    //       'gatsby-remark-smartypants',
     //     ],
-    //     plugins: [`gatsby-remark-images`],
     //   },
     // },
+    // `gatsby-transformer-sharp`,
+    // `gatsby-plugin-sharp`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -123,7 +134,7 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         // edit below
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `src/images/gatsby-icon.png`,
       },
     },
     // {
