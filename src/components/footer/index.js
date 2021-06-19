@@ -17,10 +17,7 @@ const Footer = () => (
                 <div className="description">
 
                     <h5>Maiko Miyazaki</h5>
-                    <p>My name is Maiko Miyazaki.
-                        This static website is developed for a imaginary company called "Travel" which sells travel equipment. 
-                        Created with HTML5, CSS3, Sass, plain JavaScript and jQuery.
-                    </p>
+                    <p>I'm Maiko Miyazaki, a Web Developer and apprentice Software Engineer living in Dublin, Ireland. I love to learn all things about Software development.</p>
 
                     <ul className="nav-link-list">
 
@@ -38,7 +35,7 @@ const Footer = () => (
                                         1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                                     />
                                 </svg>
-                            <p className="menu-link-text">Read more about me</p>
+                            <p className="menu-link-text">Read more</p>
                             </Link>
                         </li>
 
