@@ -2,18 +2,18 @@
 
 .inner-screen-container {
     .article-contents {
-        img.face {
+        .face {
             max-width: 50%;
 
             @include sm {
                 max-width: 230px;
             }
         }
-        img.right {
+        .right {
             display: block;
-            margin: 0 auto 10px auto;
+            margin: 0 0 10px 0;
             @include sm {
-                float: right;
+                float: right !important;
                 margin-left: 20px;
             }
         }
