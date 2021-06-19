@@ -8,7 +8,7 @@ featured: true
 topics:
  - python
  - software-development
-featuredImage: ./salty_egg.jpg
+featuredImage: './salty_egg.jpg'
 ---
 
 Wow! I love blogging so much already.
