@@ -1,1 +1,21 @@
-// No styling added here yet.
+@import "../../sass-partial/screen-size-mixin";
+
+.inner-screen-container {
+    .article-contents {
+        img.face {
+            max-width: 50%;
+
+            @include sm {
+                max-width: 230px;
+            }
+        }
+        img.right {
+            display: block;
+            margin: 0 auto 10px auto;
+            @include sm {
+                float: right;
+                margin-left: 20px;
+            }
+        }
+    }
+}
