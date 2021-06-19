@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from '../../components/layout';
 import SEO from '../../components/seo';
 import Readnext from './readnext'
@@ -9,6 +10,7 @@ import 'gatsby-remark-vscode/styles.css';
 const BlogTemplate = (props) => {
     const post = props.data.markdownRemark
     const siteMeta = props.data.site.siteMetadata
+    const image = getImage(post.frontmatter.featuredImage)
     return (
         <Layout>
             <SEO 
@@ -17,30 +19,32 @@ const BlogTemplate = (props) => {
             </SEO>
 
             <div className="inner-screen-container">
-                <section className="blog-post-header" style={{
-                    backgroundImage: `linear-gradient(
-                    to bottom,
-                    rgba(0, 0, 0, 0.3), 
-                    rgba(0, 0, 0, 0.8)), url(${post.featuredImage})`}}
-                >
-                    <p className="meta-tertiary">
-                        <time class="date-published">{post.frontmatter.date}</time>
-                        <time class="date-updated">{post.frontmatter.updatedAt}</time>
-                    </p>
-                    <h1 className="headline">
-                        {post.frontmatter.title}
-                    </h1>
-                    <p className="categories">
-                        {post.frontmatter.topics.map(topic => (
-                            <Link to={`/${topic.slug}/`} className="category">{topic.name}</Link>
-                        ))}
-                    </p>
+                <section className="blog-post-header">
+                    <GatsbyImage
+                        image={image}
+                        className="thumbnail"
+                        objectFit="cover"
+                        objectPosition="50% 50%"
+                    alt="" />
+                    <div className="blog-post-meta">
+                        <p className="meta-tertiary">
+                            <time class="date-published">{post.frontmatter.date}</time>
+                            <time class="date-updated">{post.frontmatter.updatedAt}</time>
+                        </p>
+                        <h1 className="headline">
+                            {post.frontmatter.title}
+                        </h1>
+                        <p className="categories">
+                            {post.frontmatter.topics.map(topic => (
+                                <Link to={`/${topic.slug}/`} className="category">{topic.name}</Link>
+                            ))}
+                        </p>
+                    </div>
                 </section>
 
                 <article>
                     <div className="article-contents post-contents" dangerouslySetInnerHTML={
-                        {__html: `${post.html}`}
-                    } />
+                        {__html: `${post.html}`}} />
                 </article>
 
                 <section class="sharing-buttons-section">
@@ -222,7 +226,11 @@ export const query = graphql`
                 description
                 date(formatString: "DD MMMM 'YYYY")
                 updatedAt(formatString: "DD MMMM 'YYYY")
-                featuredImage
+                featuredImage {
+                    childImageSharp {
+                      gatsbyImageData(placeholder: BLURRED)
+                    }
+                }
                 slug
                 topics {
                     name

@@ -1,5 +1,6 @@
 import * as React from "react"
 import { graphql, Link } from 'gatsby';
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Layout from '../../components/layout'
 import SEO from '../../components/seo'
 import Blogpagetopics from './blogpagetopics'
@@ -32,7 +33,11 @@ const BlogTopicTemplate = ({data, pageContext}) => {
                 <Blogpagetopics topicName={pageContext.name}/>
                 <article>
                     <div className="article-contents">
-                    {data.allMarkdownRemark.edges.map(edge => (
+                    {data.allMarkdownRemark.edges.map(edge => {
+                        
+                        const image = getImage(edge.node.frontmatter.featuredImage)
+
+                        return(
                         <div className="single-unit-post">
                             <p className="meta-tertiary">
                                 <time className="date-published">{edge.node.frontmatter.date}</time>
@@ -47,10 +52,19 @@ const BlogTopicTemplate = ({data, pageContext}) => {
                             ))}
                             </p>
                             <div className="thumbnail">
-                                <Link to={`/blog/${edge.node.frontmatter.slug}/`} className="thumbnail-image" style={{backgroundImage: `url(${edge.node.featuredImage})`}}></Link>
+                                <Link to={`/blog/${edge.node.frontmatter.slug}/`} className="thumbnail-image">
+                                    <GatsbyImage
+                                        image={image}
+                                        className="thumbnail"
+                                        objectFit="cover"
+                                        objectPosition="50% 50%"
+                                        alt="" />
+                                </Link>
                             </div>
                         </div>
-                    ))}
+                        )
+
+                    })}
 
                         <div className="pagers">
                             <div 
@@ -87,50 +101,44 @@ const BlogTopicTemplate = ({data, pageContext}) => {
             </div> 
         </div>
         </Layout>
-    )
+    );
 }
 
 export default BlogTopicTemplate
 
-export const query = graphql`
-    query BlogTopicTemplate($slug: String!, $skip: Int!, $limit: Int!) {
-        site {
-            siteMetadata {
-              title
-              author
-            }
-        }
-        allMarkdownRemark (
-            limit: $limit
-            skip: $skip
-            sort: { fields: [frontmatter___date], order: DESC }
-            filter: {
-                frontmatter: {
-                    topics: {
-                        elemMatch: {
-                            slug: {eq: $slug}
-                        }
-                    }
-                }
-            }
-        ) 
-        {
-            edges {
-                node {
-                    id
-                    frontmatter {
-                        title
-                        slug
-                        topics {
-                            name
-                            slug
-                        }
-                        date(formatString: "DD MMMM 'YY")
-                        updatedAt(formatString: "DD MMMM 'YY")
-                        featuredImage
-                    }
-                }
-            }
-        }
+export const query = graphql`query BlogTopicTemplate($slug: String!, $skip: Int!, $limit: Int!) {
+  site {
+    siteMetadata {
+      title
+      author
     }
+  }
+  allMarkdownRemark(
+    limit: $limit
+    skip: $skip
+    sort: {fields: [frontmatter___date], order: DESC}
+    filter: {frontmatter: {topics: {elemMatch: {slug: {eq: $slug}}}}}
+  ) {
+    edges {
+      node {
+        id
+        frontmatter {
+          title
+          slug
+          topics {
+            name
+            slug
+          }
+          date(formatString: "DD MMMM 'YY")
+          updatedAt(formatString: "DD MMMM 'YY")
+          featuredImage {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
+        }
+      }
+    }
+  }
+}
 `
