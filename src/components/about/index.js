@@ -1,8 +1,8 @@
 import * as React from "react"
+import { StaticImage } from "gatsby-plugin-image"
 import './about.css'
 
 import store from '../../images/old-stores-second-floor.jpg';
-import face from 'images/face.jpg';
 
 const About = () => (
     <div class="inner-screen-container">
@@ -20,7 +20,7 @@ const About = () => (
             <div class="article-contents post-contents">
                 <h2>About me</h2>
                 <p><em><b>I'm Maiko Miyazaki, a Web Developer and apprentice Software Engineer living in Dublin, Ireland. I love to learn all things about Software development.</b></em></p>
-                <img src={face} className="face right" alt="Maiko Miyazaki face picture"/>
+                <StaticImage src="../../images/face.jpg" className="face right" alt="Maiko Miyazaki face picture"/>
                 <p>As a self-taught web developer, I have created many personal projects and websites for clients using WordPress, PHP, JavaScript, and many other technologies.</p>
                 <p>Currently I am taking software development apprenticeship programme organized by <a href="https://fit.ie/">FIT</a> who provide us both off and on-the-job training.
                     At the moment, I am taking off-the-job training full-time at <a href="https://whitehallcollege.com/">Whitehall College</a> learning together with many other apprentices.</p>
