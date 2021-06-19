@@ -61,12 +61,10 @@
 
             .post-image-containter {
                 margin: auto 15px auto 0;
-                box-shadow: 4px 11px 20px 0px #00000029;
                 .image {
                     height: 60px;
                     width: 60px;
                     border-radius: 6px;
-                    background-image: url('/assets/images/old-stores-signboard.JPG');
                     background-size: cover;
                     background-repeat: no-repeat;
                     background-position: center;
@@ -96,19 +94,18 @@
                     text-transform: uppercase;
                     font-size: $unit-meta-font-size-xs;
                     color: rgba($brown-colour, 0.6);
+                    margin-left: 7px;
 
                     @include sm {
                         font-size: $unit-meta-font-size-sm;
                     }
 
                     &:after {
-                        content: ", ";
+                        content: "/";
+                        margin-left: 7px;
                     }
-
-                    &:last-child {
-                        &::after {
-                            content: "";
-                        }
+                    &:last-child:after {
+                        content: "";
                     }
                 }
             }

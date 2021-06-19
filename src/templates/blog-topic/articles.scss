@@ -99,7 +99,7 @@ article {
                 color: $pink-colour;
                 text-transform: uppercase;
                 &:after {
-                    content: ", ";
+                    content: "/";
                 }
                 &:last-child:after {
                     content: "";
@@ -109,7 +109,6 @@ article {
         .thumbnail {
             width: 100%;
             height: 30vh;
-            box-shadow: 0 10px 10px -2px #0000002e;
     
             @include sm {
                 height: 300px;
@@ -125,6 +124,10 @@ article {
                 background-position-x: 50%;
                 background-position-y: 50%;
                 border-radius: 6px;
+
+                img {
+                    border-radius: 6px;
+                }
             }
         }
     }
