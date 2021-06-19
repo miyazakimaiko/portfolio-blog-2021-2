@@ -4,7 +4,7 @@ module.exports = {
     title: `Maiko Miyazaki Personal Blog`,
     author: `Maiko Miyazaki`,
     description: `Apprentice Software Engineer / Web Developer`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `https://miyazakimaiko.com/`,
     social: {
       twitter: `MaikoMiyazaki`,
     },
