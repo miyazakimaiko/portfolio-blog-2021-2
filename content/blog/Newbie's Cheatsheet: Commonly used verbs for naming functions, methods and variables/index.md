@@ -54,8 +54,8 @@ I hope this post helps us, newbies choose a suitable verb and stick to it.
 
 ## 1. Alteration<a name="chapter-1"></a>
 
-Verb | Written<br/>on Github | Definition | Examples | Synonyms<br/>to avoid 
---- | --- | --- | --- | ---
+Verb | Writtenon Github | Definition | Examples | Synonyms to avoid 
+---- | ---------------- | ---------- | -------- | -----------------
 set | 2B | Often used to put data in an existing resource such as an attribute of an object. | set_name(), set_store_id() | 
 change | 668M | Often used when a whole thing, such as image, is replaced by something else | change_image(), change_colour() | edit
 edit | 325M | Often used same as change. It could be used especially when action is responsible for rendering the view. | edit_title(), edit_record() | change
