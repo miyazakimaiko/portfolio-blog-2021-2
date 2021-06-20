@@ -43,7 +43,7 @@ Well, at that time, I didn't have a clue. That's because I had just started the 
 
 What I learned first on the course were linked lists. So in this article, I'm going to investigate whether the linked list is suitable for the data or not. And then, I am going through other data structures in future articles.
 
-# **Is Singly Linked List a Good Choice?**
+<h2>Is Singly Linked List a Good Choice?</h2>
 
 Singly linked list looks like this visually:
 
@@ -78,7 +78,7 @@ class SinglyLinkedList{
 }
 ```
 
-### Add node at the end of the list (push)
+<h3> Add node at the end of the list (push)</h3>
 
 To add a node at the end of the list, you just need to (1)**point out the current tail’s next arrow to the new node**, and (2)**define the new node as the new tail**.
 
@@ -103,7 +103,7 @@ push(val) {
 
 Pushing takes **O(1)** complexity because it doesn't affect the other data. However, inserting an element in the middle of the list is a different story.
 
-### Inserting node in the middle of the list
+<h3> Inserting node in the middle of the list</h3>
 
 Firstly, create a method called **get** to find the location where to insert the node. There is no index to the each node, so that we can only find location by counting from the beginning of the list.
 
@@ -149,11 +149,11 @@ insert(index, value) {
 
 It is not the most efficient data structure if you are **editing/deleting** node often, because finding a node takes O(n) complexity.
 
-### **Is singly linked list useless?**
+<h3>Is singly linked list useless?</h3>
 
 In the beginning, I thought singly linked list is useless, but it’s actually useful **if the node already exists somewhere else**, and also **if it doesn’t require removing/editing nodes often**. For example, music streaming services might be using it when it comes to shuffling random music. Some of the services, we can’t go back to previous music if we are using the free version, and in that case, singly linked list contains functions only what it needs.
 
-# **How About Doubly Linked List?**
+<h2> How About Doubly Linked List?</h2>
 
 Doubly linked list is almost the same as singly linked list, but each node contains **another arrow to point out the previous node** as well as the next node. It looks like this visually:
 
@@ -214,7 +214,7 @@ push(val) {
 }
 ```
 
-# Conclusion
+<h2>Conclusion</h2>
 
 Both of the linked lists are not suitable for my chrome extension project because removing/editing elements are required regularly. These data structures work well if you are going to display each element one by one, but if you want to display all the data/selected data on a single page, then there’s no point using a linked list.
 
