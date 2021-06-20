@@ -1,6 +1,6 @@
 ---
 title: Completed JavaScript Data Structure Course, and Here is What I Learned About Stack and Queue.
-date: "2015-05-06T23:46:37.121Z"
+date: "2020-01-03"
 slug: what-i-learned-about-stack-and-queue
 updatedAt: "2021-06-20"
 description: What is stack and queue? Let's identify whether it is suitable for storing vocabulary data.
