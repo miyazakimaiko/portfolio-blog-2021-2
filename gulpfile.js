@@ -3,13 +3,13 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var autoprefixer = require('autoprefixer');
 var postcss = require('gulp-postcss');
-var paths1 = {
+var componentsPaths = {
     styles: {
         src: './src/components/**/*.scss',
         dest: './src/components'
     }
 };
-var paths2 = {
+var templatesPaths = {
     styles: {
         src: 'src/templates/**/*.scss',
         dest: 'src/templates'
@@ -26,10 +26,10 @@ function scss(paths) {
 exports.scss = scss
 function watch() {
 
-    scss(paths1)
-    gulp.watch(paths1.styles.src, scss);
+    scss(componentsPaths)
+    gulp.watch(componentsPaths.styles.src, scss);
 
-    scss(paths2)
-    gulp.watch(paths2.styles.src, scss);
+    scss(templatesPaths)
+    gulp.watch(templatesPaths.styles.src, scss);
 }
 exports.watch = watch
