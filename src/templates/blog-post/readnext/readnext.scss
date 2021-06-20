@@ -63,7 +63,7 @@
                 margin: auto 15px auto 0;
                 .image {
                     height: 60px;
-                    width: 60px;
+                    width: 80px;
                     border-radius: 6px;
                     background-size: cover;
                     background-repeat: no-repeat;
@@ -71,7 +71,7 @@
 
                     @include sm {
                         height: 100px;
-                        width: 100px;
+                        width: 140px;
                     }
                 }
             }
