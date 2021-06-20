@@ -7,7 +7,7 @@ export default () => (
     <StaticQuery
     query={graphql`query FeaturedQuery {
   allMarkdownRemark(
-    limit: 2
+    limit: 4
     sort: {fields: [frontmatter___date], order: DESC}
     filter: {frontmatter: {featured: {eq: true}}}
   ) {
