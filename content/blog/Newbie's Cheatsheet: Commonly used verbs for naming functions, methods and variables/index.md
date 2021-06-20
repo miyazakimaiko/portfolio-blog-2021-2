@@ -54,6 +54,8 @@ I hope this post helps us, newbies choose a suitable verb and stick to it.
 
 ## 1. Alteration<a name="chapter-1"></a>
 
+<div class="table-wrapper-paragraph">
+
 Verb | Writtenon Github | Definition | Examples | Synonyms to avoid 
 ---- | ---------------- | ---------- | -------- | -----------------
 set | 2B | Often used to put data in an existing resource such as an attribute of an object. | set_name(), set_store_id() | 
@@ -72,6 +74,8 @@ split | 276M | Used when separating parts of a resource. | split_table(), split_
 separate | 151M | Often used the same way as the verb split. | separate_table(), separate_group() |split 
 merge | 312M | Often used when creating a single resource from multiple resource. | merge_records(),  merge_tables() | join
 join | 220M | It can be used in a same way as merge. | join_records(),  join_tables() | merge
+
+</div>
 
 ## 2. Creation<a name="chapter-2"></a>
 
