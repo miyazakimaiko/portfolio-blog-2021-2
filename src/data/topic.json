@@ -12,11 +12,15 @@
       "slug": "software-development"
     },
     {
+      "name": "Productivity",
+      "slug": "productivity"
+    },
+    {
       "name": "Python",
       "slug": "python"
     },
     {
-      "name": "Productivity",
-      "slug": "productivity"
+      "name": "C#",
+      "slug": "c-sharp"
     }
   ]
