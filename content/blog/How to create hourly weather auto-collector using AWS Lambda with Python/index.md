@@ -423,7 +423,8 @@ def lambda_handler(event, context):
     bucket.upload_file("/tmp/{}.csv".format(date), key)
 ```
 
-##Resources
+## Resources
+
 [AWS Lambda with Pandas and NumPy by Ruslan Korniichuk](https://korniichuk.medium.com/lambda-with-pandas-fd81aa2ff25e)
 
 [AWS Lambda with Pandas and NumPy|Pandas & AWS Lambda|Pandas Lambda with Python3 by BidDataOnlineSchool](https://www.youtube.com/watch?v=vf1m1ogKYrg)
