@@ -96,4 +96,4 @@ Since I keep these three principles in mind and focusing on speeding up on tasks
 
 As an apprentice, I am going to keep this mindset while I'm in on-the-job training so that I can grow as fast as possible.
 
-Thanks for reading. If you have any opinion or question, please leave a comment below! In the meantime, please follow me on Linkedin [@Maiko Miyazaki](https://www.linkedin.com/feed/update/urn:li:activity:6771886321091821568/) or Twitter [@Maiko Miyazaki](https://twitter.com/MaikoMiyazaki)
+Thanks for reading!
