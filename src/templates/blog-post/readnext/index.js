@@ -6,7 +6,7 @@ import './readnext.css';
 export default () => (
     <StaticQuery
     query={graphql`query ReadNextQuery($relatedFilePaths: [String]) {
-  allMarkdownRemark(filter: {fileAbsolutePath: {in: $relatedFilePaths}}, limit: 6) {
+  allMarkdownRemark(filter: {fileAbsolutePath: {in: $relatedFilePaths}}, limit: 4) {
     edges {
       node {
         id
