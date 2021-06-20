@@ -10,5 +10,9 @@
     {
       "name": "Software Development",
       "slug": "software-development"
+    },
+    {
+      "name": "Python",
+      "slug": "python"
     }
   ]
