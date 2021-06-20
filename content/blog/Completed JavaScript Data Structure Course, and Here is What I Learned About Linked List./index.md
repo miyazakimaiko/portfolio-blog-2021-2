@@ -2,7 +2,7 @@
 title: Completed JavaScript Data Structure Course, and Here is What I Learned About Linked List.
 date: "2020-01-01"
 slug: what-i-learned-about-linked-list
-updatedAt: "2021-06-16"
+updatedAt: "2021-06-20"
 description: What is linked list? Let's identify whether it is suitable for storing vocabulary data.
 topics:
  - javascript
