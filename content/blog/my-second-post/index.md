@@ -2,7 +2,7 @@
 title: My Second Post!
 date: "2015-05-06T23:46:37.121Z"
 slug: my-second-post
-updatedAt: "2021-06-08T12:34:09.123Z"
+updatedAt: "2021-06-20"
 description: test
 featured: true
 topics:
