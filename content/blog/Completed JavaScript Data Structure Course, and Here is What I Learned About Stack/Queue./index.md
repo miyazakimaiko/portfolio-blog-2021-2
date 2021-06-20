@@ -11,6 +11,7 @@ topics:
 featuredImage: './stack-of-casette.jpg'
 ---
 
+<small><em>Photo by <a href="https://unsplash.com/@jontyson?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jon Tyson</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>This article is originally published on dev.to on  3 Jan 2020.</em></small>
 
 
 In the previous article, I wrote about implementing linked lists on my Chrome Extension. Ended up not using them on the project, but I could see why it can be useful for certain situations.
