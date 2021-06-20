@@ -11,7 +11,7 @@ topics:
 featuredImage: './pyramid.jpg'
 ---
 
-<small><em>Photo by <a href="https://unsplash.com/@dallimonti?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Andrés Dallimonti</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash.</a> This article is originally published on dev.to on  11 Jan 2020.</em></small>
+<small><em>Photo by <a href="https://unsplash.com/@dallimonti?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Andrés Dallimonti</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash.</a> This article is originally published on <a href="https://dev.to/maikomiyazaki">dev.to</a> on  11 Jan 2020.</em></small>
 
 In the previous article, I wrote about Binary Search Tree and saw if I could implement it to my Chrome Extension. A simple binary search tree was not perfect for my project, however, I discovered that some of the features within the tree structure is useful for the project.
 
