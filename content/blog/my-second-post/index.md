@@ -6,8 +6,8 @@ updatedAt: "2021-06-08T12:34:09.123Z"
 description: test
 featured: true
 topics:
- - python
- - software-development
+ - javascript
+ - data-structure
 featuredImage: './salty_egg.jpg'
 ---
 
