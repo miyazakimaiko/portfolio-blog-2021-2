@@ -51,7 +51,7 @@ Singly linked list looks like this visually:
 
 Each box is called a node, and they don’t have indexes. Instead, you need to define what is the starting node(**head**) and the end(**tail**), and **each node contains an arrow to point out which the next node is**.
 
-###Define Node and Singly linked list
+<h3>Define Node and Singly linked list</h3>
 
 To define Node and Singly linked list in JavaScript, it will look like this:
 
@@ -149,7 +149,7 @@ insert(index, value) {
 
 It is not the most efficient data structure if you are **editing/deleting** node often, because finding a node takes O(n) complexity.
 
-<h3>Is singly linked list useless?</h3>
+<h2>Is singly linked list useless?</h2>
 
 In the beginning, I thought singly linked list is useless, but it’s actually useful **if the node already exists somewhere else**, and also **if it doesn’t require removing/editing nodes often**. For example, music streaming services might be using it when it comes to shuffling random music. Some of the services, we can’t go back to previous music if we are using the free version, and in that case, singly linked list contains functions only what it needs.
 
