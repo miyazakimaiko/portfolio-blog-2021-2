@@ -11,7 +11,7 @@ topics:
 featuredImage: './tree.jpg'
 ---
 
-<small><em>Image by <a href="https://pixabay.com/users/publicdomainpictures-14/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=164915">PublicDomainPictures</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=164915">Pixabay</a>This article is originally published on dev.to on  11 Jan 2020.</em></small>
+<small><em>Photo by <a href="https://unsplash.com/@davidvig?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">David Vig</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash.</a> This article is originally published on dev.to on  11 Jan 2020.</em></small>
 
 
 While taking [data structures and algorithms course on Udemy](https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/), I was trying to implement what I just learned onto my [Chrome extension project](https://chrome.google.com/webstore/detail/vocab-note/obnmagkhjbjbolndeminbibodlfjnabp?hl=en&gl=IE), because the main data of the Chrome extension was stored in an array inefficiently. However, I didn't know what is the best structure, and how I can make changes to the situation.
