@@ -272,10 +272,17 @@ There are so many more data structures out there to learn, and also there's more
 <h2>Reference</h2>
 
 [JavaScript Data Structures and Algorithms Masterclass - Udemy](https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/)
+
 [JavaScript Hashmap Equivalent - StackOverflow](https://stackoverflow.com/questions/368280/javascript-hashmap-equivalent)
+
 [5 WAYS TO USE A JAVASCRIPT HASHMAP - Sunfish Empire LLC](https://sunfishempire.wordpress.com/2014/08/19/5-ways-to-use-a-javascript-hashmap/)
+
 [Objects and Hash Tables in Javascript - Medium](https://codeburst.io/objects-and-hash-tables-in-javascript-a472ad1940d9)
+
 [Hash table - Wikipedia](https://en.wikipedia.org/wiki/Hash_table#Collision_resolution)
+
 [Are JS objects hash tables? - Quora](https://www.quora.com/Are-JS-objects-hash-tables)
+
 [ Learn to Code with JavaScript Hashes - Codelikethis.](https://codelikethis.com/lessons/javascript/hashes)
+
 [The Pragmatic Programmer - goodreads.com](https://www.goodreads.com/book/show/4099.The_Pragmatic_Programmer)
