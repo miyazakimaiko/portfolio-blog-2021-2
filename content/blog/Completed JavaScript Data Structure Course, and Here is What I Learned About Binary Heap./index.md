@@ -170,6 +170,5 @@ We won't implement Binary Heap this time, but the Heap data structure itself is 
 
 <h2>Reference</h2>
 
-[JavaScript Algorithms and Data Structures Masterclass (Udemy)]
-(https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/)
+[JavaScript Algorithms and Data Structures Masterclass (Udemy)](https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/)
 [List of data structures (Wikipedia)](https://en.wikipedia.org/wiki/List_of_data_structures)
