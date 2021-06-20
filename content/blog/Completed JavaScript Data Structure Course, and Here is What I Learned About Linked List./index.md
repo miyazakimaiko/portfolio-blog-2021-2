@@ -11,6 +11,8 @@ featuredImage: './linked-list-with-js.jpg'
 featured: true
 ---
 
+<small><em>This article is originally published on dev.to on  1 Jan 2020.</em></small>
+
 For my very first JavaScript project, I chose to create a chrome extension. What I decided to create was a vocabulary memo space where users can create their own vocabulary list and keep them at the corner of their chrome browser.
 
 But at that time, I did not know any data structures but array. I didn’t even know that data can be inefficient if we use inappropriate data structures.
