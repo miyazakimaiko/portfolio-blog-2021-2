@@ -23,7 +23,7 @@ const About = () => (
                 <StaticImage src="../../images/face.JPG" className="face right" alt="Maiko Miyazaki face picture"/>
                 <p>As a self-taught web developer, I have created many personal projects and websites for clients using WordPress, PHP, JavaScript, and many other technologies.</p>
                 <p>Currently I am taking software development apprenticeship programme organized by <a href="https://fit.ie/">FIT</a> who provide us both off and on-the-job training.
-                    At the moment, I am taking off-the-job training full-time at <a href="https://whitehallcollege.com/">Whitehall College</a> learning together with many other apprentices.</p>
+                    At the moment, I am taking off-the-job training full-time at <a href="https://whitehallcollege.com/">Whitehall College</a>.</p>
 
                 <h2>About this website</h2>
                 <p>This website is hosted on Netlify. For the front end, I used Gatsby and Sass.</p>
