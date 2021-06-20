@@ -11,7 +11,7 @@ featuredImage: './chain-link-fence.jpg'
 featured: true
 ---
 
-<small><em>This article is originally published on dev.to on  1 Jan 2020.</em></small>
+<small>Photo by <a href="https://unsplash.com/@neonbrand?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">NeONBRAND</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash. </a><em>This article is originally published on dev.to on  1 Jan 2020.</em></small>
 
 For my very first JavaScript project, I chose to create a chrome extension. What I decided to create was a vocabulary memo space where users can create their own vocabulary list and keep them at the corner of their chrome browser.
 
