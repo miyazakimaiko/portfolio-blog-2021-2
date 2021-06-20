@@ -1,9 +1,9 @@
 ---
-title: What I learned about SDLC in off-the-job training
+title: 4 types of SDLC -- What I learned in off-the-job training
 date: "2021-01-31"
-slug: what-is-sdlc
+slug: 4-types-of-sdlc
 updatedAt: "2021-06-20"
-description: what-i-learned-about-sdlc-in-off-the-job-training
+description: Summarise 4 types of SDLC namely Waterfall, V-model, Spiral and Agile.
 featured: true
 topics:
  - software-development
