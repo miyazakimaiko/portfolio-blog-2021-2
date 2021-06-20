@@ -55,7 +55,7 @@ These features make binary search tree good at searching. For instance, when you
 ![why binary search tree good at searching](https://thepracticaldev.s3.amazonaws.com/i/ofgv33p5abxjagxw2leh.png)
 
 
-<h2>Basic Implementation<h2>
+<h2>Basic Implementation</h2>
 
 Firstly, we define Node and BinarySearchTree. Node has properties of 2 children, and they are defined as left and right.
 
@@ -111,7 +111,7 @@ find(val) {
 }
 ```
 
-<h2>Insertion</h2>
+<h3>Insertion</h3>
 
 Inserting also takes **O(log n)** with the same reason as searching.
 
