@@ -262,6 +262,10 @@
             font-size: 16px;
             font-family: $code-font;
         }
+        img {
+            display: block;
+            margin: auto;
+        }
     }
     ul {
         border: 2px solid #dfcac3;
