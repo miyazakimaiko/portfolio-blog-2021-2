@@ -156,5 +156,3 @@ Reference:
 ## Conclusion
 
 To summarize, the Waterfall and V-Model require strict planning at the beginning of the project, therefore it is often not suitable for many systems that are going to be used in a dynamic environment. This is one of the reasons for not being popular in recent years. On the other hand, the Spiral model or Agile Model can be more sensible for many situations unless you have developed exactly the same system in the past.  So, if I were to build my own development team or develop a software for a client I would adopt Spiral or Agile methodology. Comparing these two methodologies, I would prefer Agile since it lets the team focus on customer satisfaction which I always believe is most important. 
-
-Do you agree? Please share your thoughts in the comments!

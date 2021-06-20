@@ -68,4 +68,4 @@ We have just started the actual course from the beginning of 2021 so we are stud
 
 It has been a long way to get here, but I truly appreciate the support especially from the people in FIT and the company who hired me. I am super excited about what is coming, who I am getting to know and working together on the course of the programme and my career.
 
-I really recommend the programme to anyone interested in getting into the IT industry in Ireland. If you feel that is you, I recommend visiting their website [here](https://fit.ie/tech-apprenticeships/become-an-apprentice/). If you have any question, please leave a comment. I am happy to answer as much as I can!
+I really recommend the programme to anyone interested in getting into the IT industry in Ireland. If you feel that is you, I recommend visiting their website [here](https://fit.ie/tech-apprenticeships/become-an-apprentice/).
