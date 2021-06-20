@@ -10,7 +10,7 @@ topics:
 featuredImage: './meeting.jpg'
 ---
 
-<small><em>Photo by <a href="https://unsplash.com/@wocintechchat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Christina @ wocintechchat.com</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash.</a> This article is originally published on <a href="https://dev.to/maikomiyazaki">dev.to</a> on  2 Feb 2021.</em></small>
+<small><em>Photo by <a href="https://unsplash.com/@wocintechchat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Christina @ wocintechchat.com</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash.</a> This article is originally published on <a href="https://dev.to/maikomiyazaki">dev.to</a> on  14 Feb 2021.</em></small>
 
 When we have a project to develop a system, we would be gathering requirements before diving into [feasibility study](https://dev.to/maikomiyazaki/3-main-benefits-of-feasibility-study-27e). Whether it is for a client or for ourselves.
 
