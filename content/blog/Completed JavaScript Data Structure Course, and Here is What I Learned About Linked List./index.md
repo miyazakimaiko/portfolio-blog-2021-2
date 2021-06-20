@@ -7,7 +7,7 @@ description: What is linked list? Let's identify whether it is suitable for stor
 topics:
  - javascript
  - data-structure
-featuredImage: './linked-list-with-js.jpg'
+featuredImage: './chain-link-fence.jpg'
 featured: true
 ---
 
