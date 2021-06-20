@@ -53,7 +53,7 @@ exports.createPages = async ({ graphql, actions }) => {
                         }
                     }
                 }
-            }
+              }
               sort: { fields: [frontmatter___date], order: DESC }
               limit: 1000
             ) {
@@ -97,7 +97,7 @@ exports.createPages = async ({ graphql, actions }) => {
         })
       })
     }))
-      return null
+    return null
   })
 
   const blogPostCollection = await graphql(
@@ -156,6 +156,7 @@ exports.createPages = async ({ graphql, actions }) => {
         },
       })
     })
+
     return null
   })
 
@@ -188,22 +189,22 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
         title: {
           type: "String"
         },
-        date: {
-          type: "Date",
-          extensions: {
-            dateformat: {
-              formatString: "DD MM YYYY"
-            }
-          }
-        },
-        updatedAt: {
-          type: "Date",
-          extensions: {
-            dateformat: {
-              formatString: "DD MM YYYY"
-            }
-          }
-        },
+        // date: {
+        //   type: "Date",
+        //   extensions: {
+        //     dateformat: {
+        //       formatString: "DD MM YYYY"
+        //     }
+        //   }
+        // },
+        // updatedAt: {
+        //   type: "Date",
+        //   extensions: {
+        //     dateformat: {
+        //       formatString: "DD MM YYYY"
+        //     }
+        //   }
+        // },
         slug: {
           type: "String"
         },
