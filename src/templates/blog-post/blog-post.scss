@@ -85,6 +85,7 @@
         }
         .categories {
             font-size: $unit-categories-font-size-xs;
+            text-align: center;
     
             @include sm {
                 font-size: $unit-categories-font-size-sm;
