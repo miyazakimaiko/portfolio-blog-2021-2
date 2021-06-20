@@ -1,5 +1,5 @@
 ---
-title: Completed JavaScript Data Structure Course, and Here is What I Learned About Stack/Queue.
+title: Completed JavaScript Data Structure Course, and Here is What I Learned About Stack and Queue.
 date: "2015-05-06T23:46:37.121Z"
 slug: what-i-learned-about-stack-and-queue
 updatedAt: "2021-06-20"
