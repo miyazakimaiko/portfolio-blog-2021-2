@@ -84,7 +84,7 @@ All SDLC methodologies not only but focus on these phases:
 
 5) __Deploy__
 
-5)__Maintenance__
+6) __Maintenance__
 
 Each methodology approaches these phases differently, but the basic idea about each of them are generally similar.
 
