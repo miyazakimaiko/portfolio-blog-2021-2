@@ -29,12 +29,19 @@ And it will be done once a day, so we'll have yesterday's hourly weather data up
 ## Steps we will go through
 
 1️⃣ [Create a policy](#chapter-1)
+
 2️⃣ [Create a role](#chapter-2)
+
 3️⃣ [Set up a Lambda Function](#chapter-3)
+
 4️⃣ [Write code to fetch, clean the data from OpenWeatherMap](#chapter-4)
+
 5️⃣ [Install libraries in the same directory](#chapter-5)
+
 6️⃣[Upload the zip file on the Lambda console](#chapter-6)
+
 7️⃣ [Set up CloudWatch](#chapter-7)
+
 ➡️ Done!
 
 Let's get started 😊
