@@ -56,7 +56,7 @@ I hope this post helps us, newbies choose a suitable verb and stick to it.
 
 <div class="table-wrapper-paragraph">
 
-Verb | Writtenon Github | Definition | Examples | Synonyms to avoid 
+Verb | Written on Github | Definition | Examples | Synonyms to avoid 
 ---- | ---------------- | ---------- | -------- | -----------------
 set | 2B | Often used to put data in an existing resource such as an attribute of an object. | set_name(), set_store_id() | 
 change | 668M | Often used when a whole thing, such as image, is replaced by something else | change_image(), change_colour() | edit
@@ -79,6 +79,8 @@ join | 220M | It can be used in a same way as merge. | join_records(),  join_ta
 
 ## 2. Creation<a name="chapter-2"></a>
 
+<div class="table-wrapper-paragraph">
+
 Verb | Written<br/>on Github | Definition | Examples | Confusing<br/>synonyms 
 --- | --- | --- | --- | ---
 create | 1B | Used when creating a resource. | create_package(), create_directory() | make, generate
@@ -87,15 +89,23 @@ generate | 286M | Often used in a same way as create.  | generate_directory(), g
 copy | 1B | Used when creating a resource with the same structure and data as the original one. | copy_file(), copy_graph() | clone
 clone | 147M | Could be used in a same way as copy. | clone_file(), clone_graph() | copy
 
+</div>
+
 ## 3. Establishment<a name="chapter-3"></a>
+
+<div class="table-wrapper-paragraph">
 
 Verb | Written<br/>on Github | Definition | Examples | Confusing<br/>synonyms 
 --- | --- | --- | --- | ---
 start | 1B | Generally used when initiating an operation. | start_listening() | begin
 begin | 342M | Often used in a same way as start. | begin_listening() | start
-open | 854M | Used when changing state of a resource to make it accessible or usable. | open_file() | 
+open | 854M | Used when changing state of a resource to make it accessible or usable. | open_file() |
+
+</div>
 
 ## 4. Obtainment<a name="chapter-4"></a>
+
+<div class="table-wrapper-paragraph">
 
 Verb | Written<br/>on Github | Definition | Examples | Confusing<br/>synonyms 
 --- | --- | --- | --- | ---
@@ -107,7 +117,11 @@ find | 672M | Used when looking for an unknown data in a container. | find_eleme
 search | 438M | Generally used in a same way as find. It may refer to look for an unknown data from multiple containers. | search_element(), search_keyword() | find
  close | 492M | Used when changing state of a resource to make it inaccessible or unusable. | close_file() |  
 
+ </div>
+
 ## 5. True or False Statement<a name="chapter-5"></a>
+
+<div class="table-wrapper-paragraph">
 
 Verb | Written<br/>on Github | Definition | Examples
 --- | --- | --- | ---
@@ -115,6 +129,8 @@ is | 3B | Used when defining state of a resource. | Method: is_available(), is_c
 has | 1B | Used to define whether a resource contains a certain data. | Method: has_name(), has_date()<br/>Variables: person_has_name, course_has_date
 can | 2B | Used to define a certain ability of a resource. | can_load(), can_create() 
 should | 1B | Used to define a certain obligation of a resource. | should_render(), should_print_message()
+
+</div>
 
 ## 6. Conclusion<a name="chapter-6"></a>
 
