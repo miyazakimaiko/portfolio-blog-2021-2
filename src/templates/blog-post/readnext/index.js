@@ -3,8 +3,8 @@ import { graphql, Link } from 'gatsby';
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import './readnext.css';
 
-const ReadNextTemplate = ({data}) => {
-    const posts = data.allMarkdownRemark.edges
+const ReadNextTemplate = (props) => {
+    const posts = props.data.allMarkdownRemark.edges
 
     return (
         <section class="post-recommendation-section">
