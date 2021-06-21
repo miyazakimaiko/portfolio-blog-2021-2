@@ -221,6 +221,9 @@ export const query = graphql`
         markdownRemark(frontmatter: { slug: { eq: $slug } }) {
             id
             html
+            fields {
+                relatedFileAbsolutePaths
+            }
             frontmatter {
                 title
                 description

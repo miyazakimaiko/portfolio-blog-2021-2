@@ -109,6 +109,10 @@ exports.createPages = async ({ graphql, actions }) => {
         ) {
           edges {
             node {
+              fileAbsolutePath
+              fields {
+                relatedFileAbsolutePaths
+              }
               frontmatter {
                 title
                 slug
@@ -135,6 +139,7 @@ exports.createPages = async ({ graphql, actions }) => {
         component: path.resolve(`./src/templates/blog-post/index.js`),
         context: {
           slug: post.node.frontmatter.slug,
+          relatedFileAbsolutePaths: post.node.fields.relatedFileAbsolutePaths,
           previous,
           next,
         },
