@@ -19,9 +19,13 @@ In this article, we will discuss steps to discover the path to create a class di
 To summerise, we will go through these steps:
 
 0️⃣ [Our scenario](#chapter-0)
+
 1️⃣ [Write user stories](#chapter-1)
+
 2️⃣ [Create CRC cards](#chapter-2)
+
 3️⃣ [Translate CRC cards into a class diagram](#chapter-3)
+
 4️⃣ [Conclusion](#chapter-4)
 
 Let's get started 😊
@@ -65,9 +69,9 @@ In this section, we'll organize the components that we just highlighted in the u
 CRC cards are a great way to refine and record the components of the system design. They are like a pre-class diagram. What we need are a pen and physical cards - I personally like to use large size post-it, but we could also use online platforms like Lucidchart.
 
 A CRC card has three sections:
-1. **Class name**
-2. **Responsibilities**
-3. **Collaborators**
+    1. **Class name**
+    2. **Responsibilities**
+    3. **Collaborators**
 
 Firstly, we'd like to find the **class names**. Let's look at the first user story on the list.
 

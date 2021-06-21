@@ -37,9 +37,8 @@ Principle | Goal | Related words | Examples
 
 Now let's dive into details.
 
----
 
-# Abstraction<a name="chapter1"></a>
+## Abstraction<a name="chapter1"></a>
 
 Abstraction can reduce complexity by **hiding irrelevant information** of things. In other words, it clarfy things by **showing only relevant information**.
 
@@ -59,9 +58,8 @@ What we can see here is a much less complex structure because irrelevant informa
 
 **Abstraction is like creating the row header in the picture. They can become attributes within a Chair class**. As a result, it is much easier to create a new type of chair because you have column headers, which is a class in OOP, as a template.
 
----
 
-# Generalization<a name="chapter2"></a>
+## Generalization<a name="chapter2"></a>
 
 Generalization can reduce complexity by creating an umbrella term. In other words, having an umbrella term can reduce redundancy and improve efficiency.
 
@@ -77,9 +75,8 @@ For instance, it is clear that `Width`, `Depth`, `Height` must be included in an
 
 If that's the case, we can state that `Width`, `Depth`, `Height` as well as `Product name` and `Type` are must-have information to include in an umbrella term which we could name it `Furniture`.
 
----
 
-#Decomposition<a name="chapter3"></a>
+## Decomposition<a name="chapter3"></a>
 
 Decomposition can reduce the complexity of a problem by separating it into smaller chunks.
 
@@ -100,15 +97,15 @@ In such a situation, we usually separate the responsibilities into smaller chunk
 
 There are three types of relationships between the decomposed Fitted Kitchen object and its components, namely **Composition**, **Aggregation** and **Association**.
 
-###Composition (with Dimension)
+## Composition (with Dimension)
 
 Composition creates **the strongest relationship**. In the example above, the Fitted Kitchen could have a relationship with `Dimension` because when the Fitted Kitchen is destroyed, `Dimension` should also be destroyed. In other words, *`Dimension` cannot exist without the Fitted Kitchen itself*.
 
-###Aggregation (with Tap, Ventilation fan, Oven...)
+### Aggregation (with Tap, Ventilation fan, Oven...)
 
 Aggregation is **a looser relationship than composition**. In the example, Tap, Ventilation fan, Oven, Hob, Fridge, Freezer and Cupboard could have aggregation relationships with Fitted Kitchen if we decide that *Fitted Kitchen should not be presented to customers without one of the components*. That being said, *each component can exist or be sold individually even though the Fitted Kitchen is destroyed*.
 
-###Association (with Designer)
+### Association (with Designer)
 
 Association is **a loose relationship**. In the example, `Designer` could have an association relationship with the Fitted Kitchen, if *the existence of Designer does not affect the existence of the Fitted Kitchen and vice versa*. In other words, the Designer can exist and do their job even though the Fitted Kitchen is destroyed.
 
@@ -122,11 +119,15 @@ Let's say we are planning to have a restaurant section in our retail company lik
 
 We decided to have three menus like below:
 
+<div class="table-wrapper-paragraph">
+
 Dish Name | Comes with | Price
 --- | --- | --- 
 Grilled Salmon | Small soup, French fries | 8.50
 Vegetable Soup | Small Salad, A slice of soda bread | 8.00
 Beef Sandwich | Small Salad, Crisps | 8.50
+
+</div>
 
 Without encapsulation, we are forced to have a buffet-style bar that customer can serve themselves freely. To put it another way, a customer is able to change the Small Salad to Grilled Salmon as the side, because they are set to `public`. As a result, the price and the system of the restaurant would break.
 

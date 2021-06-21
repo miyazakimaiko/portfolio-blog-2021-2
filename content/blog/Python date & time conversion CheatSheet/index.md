@@ -21,14 +21,24 @@ In this post, I'll share a cheat sheet of date and time conversion to eliminate 
 ![Python date & time conversion CheatSheet](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/22penwtw672vtmq31wgp.png)
 
 ## Table of Contents
+
+
 1️⃣ [String to DateTime object](#chapter-1)
+
 2️⃣ [DateTime object to String](#chapter-2)
+
 3️⃣ [String to String](#chapter-3)
+
 4️⃣ [UTC timestamp in seconds to DateTime object](#chapter-4)
+
 5️⃣ [UTC timestamp in seconds to String](#chapter-5)
+
 6️⃣ [UTC time string to UTC DateTime object in different GMT](#chapter-6)
+
 7️⃣[24-hour time String to 12-hour time String](#chapter-7)
-7️⃣[Download PDF file](#chapter-8)
+
+8️⃣[Download PDF file](#chapter-8)
+
 
 
 

@@ -21,14 +21,23 @@ This post will share a cheat sheet of date and time conversion to eliminate such
 ![C sharp datetime conversion cheat sheet](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/tdci1rjmybvyo2nlwaw7.jpg)
 
 ## Table of Contents
+
 1️⃣ [String to DateTime object](#chapter-1)
+
 2️⃣ [String that is not parsable with Parse() to DateTime object](#chapter-2)
+
 3️⃣ [DateTime Object to String](#chapter-3)
+
 4️⃣ [String to String](#chapter-4)
+
 5️⃣ [DateTime Object to Unix Timestamp in Seconds](#chapter-5)
+
 6️⃣ [Unix Timestamp in Seconds to DateTime Object](#chapter-6)
+
 7️⃣ [UTC timezone String to DateTimeOffset object in a different timezone](#chapter-7)
+
 8️⃣ [24-hour time String to 12-hour time String](#chapter-8)
+
 9️⃣ [Download PDF file](#chapter-9)
 
 
