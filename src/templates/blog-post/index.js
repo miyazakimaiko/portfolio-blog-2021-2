@@ -3,14 +3,16 @@ import { graphql, Link } from 'gatsby';
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from '../../components/layout';
 import SEO from '../../components/seo';
-import Readnext from './readnext'
 import './blog-post.css';
+import './readnext.css';
 import 'gatsby-remark-vscode/styles.css';
 
 const BlogTemplate = (props) => {
     const post = props.data.markdownRemark
     const siteMeta = props.data.site.siteMetadata
-    const image = getImage(post.frontmatter.featuredImage)
+    const mainImage = getImage(post.frontmatter.featuredImage)
+    const related = props.data.allMarkdownRemark.edges
+
     return (
         <Layout>
             <SEO 
@@ -21,7 +23,7 @@ const BlogTemplate = (props) => {
             <div className="inner-screen-container">
                 <section className="blog-post-header">
                     <GatsbyImage
-                        image={image}
+                        image={mainImage}
                         className="thumbnail"
                         objectFit="cover"
                         objectPosition="50% 50%"
@@ -201,7 +203,36 @@ const BlogTemplate = (props) => {
                     </ul>
                 </section>
 
-                <Readnext />
+                <section class="post-recommendation-section">
+                    <h4>READ NEXT</h4>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="arrow-icon" viewBox="0 0 16 16">
+                        <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/></svg>
+                    <hr />
+                    <div class="posts-container">
+                    {related.map(edge => {
+                    const relatedImage = getImage(edge.node.frontmatter.featuredImage)
+                        return (
+                        <div class="single-post">
+                            <div class="post-image-containter">
+                                <Link to={`/blog/${edge.node.frontmatter.slug}/`}>
+                                    <GatsbyImage
+                                        className="image"
+                                        image={relatedImage} />    
+                                </Link>
+                            </div>
+                            <div class="post-detail">
+                                <h5 class="title">
+                                    <Link to={`/blog/${edge.node.frontmatter.slug}/`}>{edge.node.frontmatter.title}</Link>
+                                </h5>
+                                {edge.node.frontmatter.topics.map(topic => (
+                                <p class="topic">{topic.name}</p>
+                                ))}
+                            </div>
+                        </div>
+                        )
+                    })}
+                    </div>
+                </section>
             </div>
         </Layout>
     )
@@ -210,7 +241,7 @@ const BlogTemplate = (props) => {
 export default BlogTemplate
 
 export const query = graphql`
-    query BlogTemplate($slug: String!) {
+    query BlogTemplate($slug: String! $relatedFilePaths: [String]) {
         site {
             siteMetadata {
               title
@@ -239,6 +270,26 @@ export const query = graphql`
                     name
                     slug
                 }
+            }
+        }
+        allMarkdownRemark(filter: {fileAbsolutePath: {in: $relatedFilePaths}}, limit: 4) {
+            edges {
+              node {
+                id
+                frontmatter {
+                  slug
+                  topics {
+                    name
+                    slug
+                  }
+                  title
+                  featuredImage {
+                    childImageSharp {
+                      gatsbyImageData
+                    }
+                  }
+                }
+              }
             }
         }
     }

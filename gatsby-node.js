@@ -1,6 +1,5 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
-const { link } = require("fs")
 
 exports.createSchemaCustomization = ({ actions, schema }) => {
   const { createTypes } = actions
@@ -139,7 +138,7 @@ exports.createPages = async ({ graphql, actions }) => {
         component: path.resolve(`./src/templates/blog-post/index.js`),
         context: {
           slug: post.node.frontmatter.slug,
-          relatedFileAbsolutePaths: post.node.fields.relatedFileAbsolutePaths,
+          relatedFilePaths: post.node.fields.relatedFileAbsolutePaths.slice(0,4),
           previous,
           next,
         },
