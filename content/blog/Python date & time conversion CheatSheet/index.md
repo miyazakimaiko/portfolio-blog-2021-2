@@ -3,7 +3,7 @@ title: Python date & time conversion CheatSheet
 date: "2021-04-10"
 slug: python-date-time-conversion-cheat-sheet
 updatedAt: "2021-06-21"
-description: A cheat sheet of date and time conversion to eliminate such little time-consuming procedures
+description: Python cheat sheet of date and time conversion to eliminate such little time-consuming procedures
 featured: true
 topics:
  - python
