@@ -7,7 +7,7 @@ description: Summarised steps to implement gatsby-remark-related-posts
 featured: true
 topics:
  - gatsby
-featuredImage: './related-post.jpg'
+featuredImage: './great-gatsby.jpg'
 ---
 
 ## Motivation
@@ -16,14 +16,15 @@ I had difficult time dealing with creating a related post conponent when I build
 
 ## Requirements
 
-**Using allMarkdownRemark for querying .md files**
+### Using allMarkdownRemark for querying .md files
 It seems like it's not compatible with .mdx files or mdx query. If you find it possible, please let me know by creating an issue [here](). 
     
-**gatsby-remark-related-posts plugin is installed**    
+### gatsby-remark-related-posts plugin is installed
+
 To install the plugin, please refer to [this page](https://www.gatsbyjs.com/plugins/gatsby-remark-related-posts/).
 
-**My file hierarchy**
-
+### File hierarchy
+ 
 ```js
 project
 │   gatsby-config.js
