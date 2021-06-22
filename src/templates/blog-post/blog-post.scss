@@ -360,14 +360,17 @@
         color: $main-font-colour;
         font-size: 16px;
         margin-bottom: 26px;
-        .mtk1 {
-            color: $main-font-colour;
-        }
-        .mtk3 {
-            color: rgba($main-font-colour, 0.7);
-        }
-        .mtk4 {
-            color: #117886;
+        .grvsc-code {
+            line-height: 1.5;
+            .mtk1 {
+                color: $main-font-colour;
+            }
+            .mtk3 {
+                color: rgba($main-font-colour, 0.7);
+            }
+            .mtk4 {
+                color: #117886;
+            }
         }
     }
 }
