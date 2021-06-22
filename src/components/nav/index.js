@@ -36,7 +36,7 @@ const Nav = () => (
                         0-1.437-.99-.98-1.767L7.022 1.566z"
                     />
                 </svg>
-                <h3 className="title">Popular Articles</h3>
+                <h3 className="title">Featured Articles</h3>
             </div>
             <Featured />
         </div>
