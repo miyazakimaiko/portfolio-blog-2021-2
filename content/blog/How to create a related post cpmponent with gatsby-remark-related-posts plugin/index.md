@@ -16,36 +16,36 @@ I had difficult time dealing with creating a related post conponent when I build
 
 ## Requirements
 
-    **Using allMarkdownRemark for querying .md files**
-    It seems like it's not compatible with .mdx files or mdx query. If you find it possible, please let me know by creating an issue [here](). 
+**Using allMarkdownRemark for querying .md files**
+It seems like it's not compatible with .mdx files or mdx query. If you find it possible, please let me know by creating an issue [here](). 
     
-    **gatsby-remark-related-posts plugin is installed**    
-    To install the plugin, please refer to [this page](https://www.gatsbyjs.com/plugins/gatsby-remark-related-posts/).
+**gatsby-remark-related-posts plugin is installed**    
+To install the plugin, please refer to [this page](https://www.gatsbyjs.com/plugins/gatsby-remark-related-posts/).
 
-    **My file hierarchy**
+**My file hierarchy**
 
-    ```js
-    project
-    │   gatsby-config.js
-    │   gatsby-node.js   
-    │
-    └───content
-    │   └───blog 
-    │       └───article1   
-    │       │   │   index.md
-    │       │   │   featured_image.jpg
-    │       │
-    │       └───article2
-    │       │   │   index.md
-    │       │   │   featured_image.jpg
-    │       
-    └───src
-    │   └───templates 
-    │       └───article.js
-    ...     ...
+```js
+project
+│   gatsby-config.js
+│   gatsby-node.js   
+│
+└───content
+│   └───blog 
+│       └───article1   
+│       │   │   index.md
+│       │   │   featured_image.jpg
+│       │
+│       └───article2
+│       │   │   index.md
+│       │   │   featured_image.jpg
+│       
+└───src
+│   └───templates 
+│       └───article.js
+...     ...
 
-    ```
-    This folder is used as the example.
+```
+This folder is used as the example.
 
 
 ## Implementation
