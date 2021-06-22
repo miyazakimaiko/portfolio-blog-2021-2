@@ -10,6 +10,9 @@ topics:
 featuredImage: './great-gatsby.jpg'
 ---
 
+<em><small>Photo by <a href="https://unsplash.com/@girlwithredhat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Girl with red hat</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash.</a></small></em>
+
+
 ## Motivation
 
 I had difficult time dealing with creating a related post conponent when I build this website. I found a couple of ways to implement it without a plugin, but I wanted it as simple as possible, and didn't mind using a plugin for it. Then I found gatsby-remark-related-posts plugin, which seemed feasible, but I couldn't find solutions to some of the issues I came across when implementing it. So this article is for the people who stuck like me. I'll summarise implementation steps to make it as easy as possible to understand.
