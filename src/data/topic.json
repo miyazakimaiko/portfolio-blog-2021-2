@@ -22,5 +22,9 @@
     {
       "name": "C#",
       "slug": "c-sharp"
+    },
+    {
+      "name": "Gatsby",
+      "slug": "gatsby"
     }
   ]
